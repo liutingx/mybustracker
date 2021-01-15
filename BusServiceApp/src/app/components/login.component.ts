@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
   }
 
   googleAuth(){
-    window.open('https://mybustracker.vercel.app/auth/google', "mywindow", "location=1,status=1,scrollbars=1, width=800,height=800")
+    window.open('https://mybustracker.herokuapp.com/auth/google', "mywindow", "location=1,status=1,scrollbars=1, width=800,height=800")
     window.addEventListener('message', (message) => {
       localStorage.setItem('accessToken', message.data.token)
       localStorage.setItem('user', message.data.user)
