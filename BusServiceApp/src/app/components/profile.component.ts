@@ -21,7 +21,7 @@ export class ProfileComponent implements OnInit {
       const userToken = localStorage.getItem('accessToken')
       const headers = (new HttpHeaders())
               .set('Authorization', `Bearer ${userToken}`)
-      this.http.delete<any>(`/delete`, { headers, observe: 'response' })
+      this.http.delete<any>(`https://mybustracker.herokuapp.com/delete`, { headers, observe: 'response' })
         .toPromise()
         .then(resp => {
           if(resp.status == 200){
